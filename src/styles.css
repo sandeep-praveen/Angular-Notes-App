@@ -1,0 +1,38 @@
+body {
+    background-color: #6c757d;
+}
+
+a {
+    text-decoration: none !important;
+}
+
+.list-group-item:hover {
+    background-color: #f8f9fa !important;
+}
+
+.scrollbar {
+    max-height: 100vh;
+    overflow-x: auto;
+    overflow-y: auto;
+}
+
+@media only screen and (min-width: 768px) {
+
+    .scrollbar::-webkit-scrollbar {
+        height: 8px;
+        width: 8px;
+    }
+
+    .scrollbar::-webkit-scrollbar-thumb {
+        background-color: #888;
+        border-radius: 6px;
+    }
+
+    .scrollbar::-webkit-scrollbar-thumb:hover {
+        background-color: #555;
+    }
+
+    .scrollbar::-webkit-scrollbar-track {
+        background-color: #eee;
+    }
+}
