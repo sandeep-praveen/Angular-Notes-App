@@ -1,0 +1,64 @@
+[{
+  "_id": {
+    "$oid": "65c0d11bdff3513181ab735e"
+  },
+  "language": "Html",
+  "snippets": [
+    {
+      "name": "password",
+      "code": {
+        "html": "<label class=\"form-label\">Password:</label>\n<div class=\"d-flex align-items-center justify-content-end\">\n           <input type=\"password\" class=\"form-control\" autocomplete=\"off\">\n           <i class=\"bi bi-eye position-absolute pe-3\"></i>\n</div>",
+        "css": "",
+        "js": "",
+        "requirements": "bootstrap"
+      },
+      "_id": {
+        "$oid": "65c0d11bdff3513181ab735f"
+      }
+    },
+    {
+      "name": "play button",
+      "code": {
+        "html": "<div class=\"d-flex align-items-center justify-content-center\">\n      <span class=\"p-5 bg-dark rounded\"></span>\n      <i class=\"bi bi-play-circle-fill text-white position-absolute\"></i>\n</div>",
+        "css": "",
+        "js": "",
+        "requirements": "bootstrap"
+      },
+      "_id": {
+        "$oid": "65c0d6fcdff3513181ab7404"
+      }
+    },
+    {
+      "name": "hover",
+      "code": {
+        "html": "<div class=\"square bg-info\">\n    <div class=\"overlay text-white\">\n      <i class=\"bi bi-eye-fill\"></i>\n      <i class=\"bi bi-trash-fill\"></i>\n    </div>\n</div>",
+        "css": ".square {\n    width: 100px;\n    height: 100px;\n    position: relative;\n    border-radius: 5px;\n}\n\n.overlay {\n    width: 100%;\n    height: 100%;\n    gap: 8px;\n    opacity: 0;\n    position: absolute;\n    display: flex;\n    align-items: center;\n    justify-content: center;\n    border-radius: 5px;\n    background-color: rgba(0, 0, 0, 0.5);\n    transition: opacity 0.4s ease;\n}\n\n.square:hover .overlay {\n    opacity: 1;\n}",
+        "js": "",
+        "requirements": "bootstrap"
+      },
+      "_id": {
+        "$oid": "65c1d5ab9020dc399f413f2e"
+      }
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "65c0d25bdff3513181ab736e"
+  },
+  "language": "Angular",
+  "snippets": [
+    {
+      "name": "password",
+      "code": {
+        "html": "<label class=\"form-label\">Password:</label>\n<div class=\"d-flex align-items-center justify-content-end\">\n    <input type=\"{{ hidePassword ? 'password' : 'text' }}\" class=\"form-control\" formControlName=\"pwd\"\n                (keyup.enter)=\"Authenticate()\" autocomplete=\"off\">\n    <i *ngIf=\"authForm.get('pwd')?.value != ''\" [ngClass]=\"hidePassword ? 'bi bi-eye-slash' : 'bi bi-eye'\" class=\"position-absolute pe-3\" (click)=\"togglePassword()\"></i>\n</div>",
+        "css": "",
+        "js": "togglePassword() {\n    this.hidePassword = !this.hidePassword;\n}",
+        "requirements": "forms"
+      },
+      "_id": {
+        "$oid": "65c0d25bdff3513181ab736f"
+      }
+    }
+  ]
+}]
